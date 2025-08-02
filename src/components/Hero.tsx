@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Play, Users, BookOpen, Heart, MapPin } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Play, Users, BookOpen, Heart, MapPin, Search } from "lucide-react";
 import mosqueHero from "@/assets/mosque-hero.jpg";
 
 const Hero = () => {
@@ -63,6 +64,20 @@ const Hero = () => {
               <Play className="w-5 h-5 mr-2" />
               Watch Our Story
             </Button>
+          </div>
+
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-16 animate-fade-in" style={{animationDelay: '1s'}}>
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+              <Input 
+                placeholder="Search mosque services, academy programs, events, and community resources..."
+                className="pl-12 pr-4 py-4 bg-primary-foreground/10 backdrop-blur border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:bg-primary-foreground/20 focus:border-accent text-lg rounded-xl"
+              />
+              <Button variant="islamic" size="sm" className="absolute right-2 top-1/2 transform -translate-y-1/2">
+                Search
+              </Button>
+            </div>
           </div>
 
           {/* Quick Links Navigation */}
