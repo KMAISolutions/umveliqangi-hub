@@ -189,8 +189,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-primary/10 animate-fade-in">
-            <div className="mb-4">
+          <div className="lg:hidden mt-2 p-4 border border-primary/10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 rounded-xl shadow-elegant max-h-[70vh] overflow-y-auto overflow-x-hidden animate-in fade-in-50 z-50">
+            <div className="mb-3">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                 <Input 
@@ -199,7 +199,7 @@ const Navigation = () => {
                 />
               </div>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2">
               <Button variant="ghost" className="w-full justify-start" asChild>
                 <a href="/">Home</a>
               </Button>
