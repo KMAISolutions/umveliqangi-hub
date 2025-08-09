@@ -2,23 +2,37 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Search, Phone, MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+  NavigationMenuLink,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Facilities", href: "/facilities" },
-    { name: "Academy", href: "/academy" },
-    { name: "E-Learning", href: "/e-learning" },
-    { name: "Community", href: "/community" },
-    { name: "Events", href: "/events" },
-    { name: "Media", href: "/media" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Contact", href: "/contact" }
-  ];
-
+  const subMenus = {
+    about: [
+      { label: "About", href: "/about" },
+      { label: "Facilities", href: "/facilities" },
+    ],
+    academy: [
+      { label: "Academy Overview", href: "/academy" },
+      { label: "E-Learning", href: "/e-learning" },
+    ],
+    community: [
+      { label: "Community Projects", href: "/community" },
+      { label: "Events", href: "/events" },
+    ],
+    media: [
+      { label: "Media", href: "/media" },
+      { label: "Gallery", href: "/gallery" },
+    ],
+  } as const;
   return (
     <nav className="bg-background/95 backdrop-blur-md border-b border-primary/10 sticky top-0 z-50 shadow-elegant">
       {/* Top Contact Bar */}
@@ -67,20 +81,97 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center flex-wrap gap-1">
-            {navItems.map((item) => (
-              <Button
-                key={item.name}
-                variant="ghost"
-                className="text-foreground hover:text-primary"
-                asChild
-              >
-                <a href={item.href}>{item.name}</a>
-              </Button>
-            ))}
-            <Button variant="donate" size="sm" className="ml-4">
-              Donate
+          <div className="hidden lg:flex items-center gap-3">
+            <NavigationMenu>
+              <NavigationMenuList className="flex items-center gap-1">
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <a href="/" className={navigationMenuTriggerStyle()}>Home</a>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-2 p-4 md:w-[240px]">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a href="/about" className="block rounded-md p-2 hover:bg-accent hover:text-accent-foreground">About</a>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a href="/facilities" className="block rounded-md p-2 hover:bg-accent hover:text-accent-foreground">Facilities</a>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Academy</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-2 p-4 md:w-[260px]">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a href="/academy" className="block rounded-md p-2 hover:bg-accent hover:text-accent-foreground">Academy Overview</a>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a href="/e-learning" className="block rounded-md p-2 hover:bg-accent hover:text-accent-foreground">E-Learning</a>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Community</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-2 p-4 md:w-[260px]">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a href="/community" className="block rounded-md p-2 hover:bg-accent hover:text-accent-foreground">Community Projects</a>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a href="/events" className="block rounded-md p-2 hover:bg-accent hover:text-accent-foreground">Events</a>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Media</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-2 p-4 md:w-[240px]">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a href="/media" className="block rounded-md p-2 hover:bg-accent hover:text-accent-foreground">Media</a>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a href="/gallery" className="block rounded-md p-2 hover:bg-accent hover:text-accent-foreground">Gallery</a>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <a href="/contact" className={navigationMenuTriggerStyle()}>Contact</a>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            <Button variant="donate" size="sm" className="ml-2" asChild>
+              <a href="/donations">Donations</a>
             </Button>
           </div>
 
@@ -108,19 +199,65 @@ const Navigation = () => {
                 />
               </div>
             </div>
-            <div className="space-y-2">
-              {navItems.map((item) => (
-                <Button
-                  key={item.name}
-                  variant="ghost"
-                  className="w-full justify-start text-foreground hover:text-primary"
-                  asChild
-                >
-                  <a href={item.href}>{item.name}</a>
-                </Button>
-              ))}
-              <Button variant="donate" className="w-full mt-4">
-                Donate Now
+            <div className="space-y-3">
+              <Button variant="ghost" className="w-full justify-start" asChild>
+                <a href="/">Home</a>
+              </Button>
+
+              <div>
+                <p className="px-1 text-xs font-medium text-muted-foreground">About</p>
+                <div className="mt-1 space-y-1">
+                  <Button variant="ghost" className="w-full justify-start" asChild>
+                    <a href="/about">About</a>
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start" asChild>
+                    <a href="/facilities">Facilities</a>
+                  </Button>
+                </div>
+              </div>
+
+              <div>
+                <p className="px-1 text-xs font-medium text-muted-foreground">Academy</p>
+                <div className="mt-1 space-y-1">
+                  <Button variant="ghost" className="w-full justify-start" asChild>
+                    <a href="/academy">Academy Overview</a>
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start" asChild>
+                    <a href="/e-learning">E-Learning</a>
+                  </Button>
+                </div>
+              </div>
+
+              <div>
+                <p className="px-1 text-xs font-medium text-muted-foreground">Community</p>
+                <div className="mt-1 space-y-1">
+                  <Button variant="ghost" className="w-full justify-start" asChild>
+                    <a href="/community">Community Projects</a>
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start" asChild>
+                    <a href="/events">Events</a>
+                  </Button>
+                </div>
+              </div>
+
+              <div>
+                <p className="px-1 text-xs font-medium text-muted-foreground">Media</p>
+                <div className="mt-1 space-y-1">
+                  <Button variant="ghost" className="w-full justify-start" asChild>
+                    <a href="/media">Media</a>
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start" asChild>
+                    <a href="/gallery">Gallery</a>
+                  </Button>
+                </div>
+              </div>
+
+              <Button variant="donate" className="w-full" asChild>
+                <a href="/donations">Donations</a>
+              </Button>
+
+              <Button variant="ghost" className="w-full justify-start" asChild>
+                <a href="/contact">Contact</a>
               </Button>
             </div>
           </div>
