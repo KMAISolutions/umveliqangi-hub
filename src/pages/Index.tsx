@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import PrayerTimesWidget from "@/components/PrayerTimesWidget";
 import SocialFeed from "@/components/SocialFeed";
 import CommunityPoll from "@/components/CommunityPoll";
-import QuickActions from "@/components/QuickActions";
+
 
 const Index = () => {
   return (
@@ -37,7 +37,7 @@ const Index = () => {
       </section>
       
       <Footer />
-      <QuickActions />
+      
     </div>
   );
 };

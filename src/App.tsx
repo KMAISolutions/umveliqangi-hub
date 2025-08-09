@@ -9,6 +9,7 @@ import Events from "./pages/Events";
 import Community from "./pages/Community";
 import Facilities from "./pages/Facilities";
 import NotFound from "./pages/NotFound";
+import Gallery from "./pages/Gallery";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/events" element={<Events />} />
           <Route path="/community" element={<Community />} />
           <Route path="/facilities" element={<Facilities />} />
+          <Route path="/gallery" element={<Gallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
