@@ -1,7 +1,7 @@
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, Facebook } from "lucide-react";
 import { menuItems } from "./menuData";
 import { Link } from "react-router-dom";
 
@@ -54,8 +54,17 @@ export default function MobileNav() {
               ))}
             </Accordion>
           </div>
-          <div className="mt-auto p-4 border-t bg-background sticky bottom-0">
-            <Button variant="donate" className="w-full" asChild>
+          <div className="mt-auto p-4 border-t bg-background sticky bottom-0 flex items-center justify-between gap-3">
+            <a
+              href="https://www.facebook.com/p/Umveliqangi-Winterveldt-Juma-Masjid-100068276823921/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-md hover:bg-primary/10"
+            >
+              <Facebook className="w-5 h-5" aria-hidden />
+            </a>
+            <Button variant="donate" className="flex-1" asChild>
               <Link to="/#donate">Donate</Link>
             </Button>
           </div>

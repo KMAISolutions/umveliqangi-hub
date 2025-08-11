@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { menuItems } from "./menuData";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Facebook } from "lucide-react";
 
 const triggerClass =
   "px-3 py-2 text-sm font-medium text-foreground hover:underline data-[state=open]:underline focus:outline-none";
@@ -73,9 +74,16 @@ export default function MegaMenu() {
             )}
           </NavigationMenuItem>
         ))}
-        {/* Donate button as distinct */}
+        {/* Social icon and Donate button */}
         <NavigationMenuItem>
-          <Button asChild variant="donate" size="sm" className="ml-2">
+          <Button asChild variant="ghost" size="icon" aria-label="Facebook">
+            <a href="https://www.facebook.com/p/Umveliqangi-Winterveldt-Juma-Masjid-100068276823921/" target="_blank" rel="noopener noreferrer">
+              <Facebook className="w-4 h-4" aria-hidden />
+            </a>
+          </Button>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Button asChild variant="donate" size="sm" className="ml-1">
             <Link to="/#donate">Donate</Link>
           </Button>
         </NavigationMenuItem>

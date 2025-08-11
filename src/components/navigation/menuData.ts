@@ -110,7 +110,6 @@ export const menuItems: MenuItem[] = [
           { label: "Skills Training & Workshops", href: "/events#training", icon: ClipboardList },
           { label: "Event Pages with RSVP / Maps", href: "/events#rsvp", icon: FileText },
           { label: "Upcoming Events Widget", href: "/events#upcoming", icon: Calendar },
-          { label: "Social Media", href: "/community#social", icon: Users },
         ],
       },
     ],
@@ -125,8 +124,14 @@ export const menuItems: MenuItem[] = [
           { label: "Photo Gallery", href: "/gallery#photos", icon: Image },
           { label: "Video Gallery", href: "/media#videos", icon: Video },
           { label: "Live Stream Page", href: "/media#live", icon: Radio },
-          { label: "Latest Facebook Feed", href: "/media#facebook", icon: Newspaper },
           { label: "Donor Appreciation Stories", href: "/media#donors", icon: Award },
+        ],
+      },
+      {
+        heading: "Social Media",
+        links: [
+          { label: "Latest Facebook Feed", href: "/media#facebook", icon: Newspaper },
+          { label: "Social Media", href: "/media#social", icon: Users },
         ],
       },
     ],

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Play, Users, BookOpen, Heart } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import mosqueHero from "@/assets/mosque-hero.jpg";
+import AnimatedHeadline from "@/components/AnimatedHeadline";
 
 const Hero = () => {
   return (
@@ -36,9 +37,7 @@ const Hero = () => {
           </h1>
 
           {/* Motto */}
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 font-medium animate-fade-in" style={{animationDelay: '0.2s'}}>
-            "Igniting Excellence, Empowering Communities"
-          </p>
+          <AnimatedHeadline />
 
           {/* Description */}
           <p className="text-lg text-primary-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: '0.4s'}}>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Search, Phone, MapPin } from "lucide-react";
+import { Search, Phone, MapPin, Facebook } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import MegaMenu from "./navigation/MegaMenu";
 import MobileNav from "./navigation/MobileNav";
@@ -29,11 +29,20 @@ const Navigation = () => {
               <span>Winterveldt, South Africa</span>
             </div>
           </div>
-          <div className="hidden md:block">
-            <span>
-              Prayer Times: Fajr 05:30 | Dhuhr 12:15 | Asr 15:45 | Maghrib 18:20 |
-              Isha 19:45
+          <div className="flex items-center gap-4">
+            <span className="hidden md:inline">
+              Prayer Times: Fajr 05:30 | Dhuhr 12:15 | Asr 15:45 | Maghrib 18:20 | Isha 19:45
             </span>
+            <a
+              href="https://www.facebook.com/p/Umveliqangi-Winterveldt-Juma-Masjid-100068276823921/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="inline-flex items-center justify-center w-8 h-8 rounded-md hover:bg-primary-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+            >
+              <Facebook className="w-4 h-4" aria-hidden />
+            </a>
+            <LanguageSelector />
           </div>
         </div>
       </div>

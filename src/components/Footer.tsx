@@ -49,8 +49,10 @@ const Footer = () => {
               Building bridges of understanding and empowerment.
             </p>
             <div className="flex gap-3">
-              <Button variant="ghost" size="icon" className="text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10">
-                <Facebook className="w-5 h-5" />
+              <Button variant="ghost" size="icon" className="text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10" asChild>
+                <a href="https://www.facebook.com/p/Umveliqangi-Winterveldt-Juma-Masjid-100068276823921/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <Facebook className="w-5 h-5" />
+                </a>
               </Button>
               <Button variant="ghost" size="icon" className="text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10">
                 <Instagram className="w-5 h-5" />

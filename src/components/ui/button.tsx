@@ -22,7 +22,7 @@ const buttonVariants = cva(
         masjid: "bg-islamic-emerald text-primary-foreground hover:bg-islamic-emerald/90 shadow-elegant",
         crescent: "bg-islamic-crescent text-primary-foreground hover:bg-islamic-crescent/90 shadow-glow",
         pearl: "bg-islamic-pearl text-foreground border border-primary/20 hover:bg-primary/5",
-        donate: "bg-gradient-hero text-primary-foreground hover:shadow-mosque transform hover:scale-105",
+        donate: "border border-primary/40 bg-background text-foreground hover:bg-primary/5",
       },
       size: {
         default: "h-11 px-6 py-2",
