@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube, Send } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <footer className="bg-gradient-to-br from-foreground to-foreground/90 text-primary-foreground">
@@ -11,18 +13,18 @@ const Footer = () => {
       <div className="border-b border-primary-foreground/10">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4">Stay Connected with Our Community</h3>
+            <h3 className="text-2xl font-bold mb-4">{t("footer.newsletter.title")}</h3>
             <p className="text-primary-foreground/80 mb-6">
-              Get updates on prayer times, events, programs, and community news delivered to your inbox.
+              {t("footer.newsletter.desc")}
             </p>
             <div className="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
               <Input 
-                placeholder="Enter your email address" 
+                placeholder={t("footer.newsletter.placeholder")} 
                 className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60"
               />
               <Button variant="islamic" className="bg-primary text-primary-foreground">
                 <Send className="w-4 h-4 mr-2" />
-                Subscribe
+                {t("footer.newsletter.subscribe")}
               </Button>
             </div>
           </div>
@@ -65,7 +67,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Quick Links</h4>
+            <h4 className="font-semibold text-lg mb-6">{t("footer.quickLinks.title")}</h4>
             <ul className="space-y-3">
               {[
                 "About Us", "Prayer Times", "Academy Programs", "E-Learning Platform", 
@@ -82,7 +84,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Our Services</h4>
+            <h4 className="font-semibold text-lg mb-6">{t("footer.services.title")}</h4>
             <ul className="space-y-3">
               {[
                 "Qur'an Education", "Leadership Training", "Primary Healthcare", "Feeding Programs",
@@ -99,7 +101,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Contact Information</h4>
+            <h4 className="font-semibold text-lg mb-6">{t("footer.contact.title")}</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-1" />
@@ -126,10 +128,10 @@ const Footer = () => {
                 <Clock className="w-5 h-5 text-primary mt-1" />
                 <div>
                   <p className="text-primary-foreground/80">
-                    <strong>Office Hours:</strong><br />
-                    Mon - Fri: 8:00 AM - 5:00 PM<br />
-                    Sat: 8:00 AM - 2:00 PM<br />
-                    Sun: Prayer times only
+                    <strong>{t("footer.contact.officeHours")}</strong><br />
+                    {t("footer.contact.weekdays")}<br />
+                    {t("footer.contact.saturday")}<br />
+                    {t("footer.contact.sunday")}
                   </p>
                 </div>
               </div>
@@ -147,13 +149,13 @@ const Footer = () => {
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                Privacy Policy
+                {t("footer.bottom.privacy")}
               </a>
               <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                Terms of Service
+                {t("footer.bottom.terms")}
               </a>
               <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                Accessibility
+                {t("footer.bottom.accessibility")}
               </a>
             </div>
           </div>

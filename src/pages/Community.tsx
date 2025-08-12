@@ -4,8 +4,10 @@ import BlogSection from "@/components/BlogSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CalendarDays, Heart, Users, Award } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Community = () => {
+  const { t } = useTranslation();
   const communityPosts = [
     {
       id: 1,
@@ -68,10 +70,9 @@ const Community = () => {
       {/* Hero Section */}
       <section className="bg-gradient-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Community Services</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("community.hero.title")}</h1>
           <p className="text-xl max-w-2xl mx-auto">
-            Building stronger communities through compassionate service, healthcare initiatives, 
-            and sustainable development programs.
+            {t("community.hero.description")}
           </p>
         </div>
       </section>
@@ -126,7 +127,7 @@ const Community = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <BlogSection 
-                title="Community News & Impact Stories"
+                title={t("community.blog.title")}
                 category="community"
                 posts={communityPosts}
               />
@@ -137,7 +138,7 @@ const Community = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <CalendarDays className="w-5 h-5" />
-                    Upcoming Community Events
+                    {t("community.events.upcoming")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -148,9 +149,9 @@ const Community = () => {
                       <p className="text-sm text-muted-foreground">{event.location}</p>
                     </div>
                   ))}
-                  <Button variant="outline" className="w-full mt-4">
-                    View All Events
-                  </Button>
+                <Button variant="outline" className="w-full mt-4">
+                  {t("actions.viewAll")}
+                </Button>
                 </CardContent>
               </Card>
             </div>

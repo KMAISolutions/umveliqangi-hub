@@ -3,8 +3,10 @@ import { Play, Users, BookOpen, Heart } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import mosqueHero from "@/assets/mosque-hero.jpg";
 import AnimatedHeadline from "@/components/AnimatedHeadline";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -41,27 +43,26 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg text-primary-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: '0.4s'}}>
-            A beacon of faith, education, and community service in Winterveldt since 1983. 
-            Join us in building a stronger, more connected Islamic community through worship, learning, and service.
+            {t("hero.description")}
           </p>
 
           {/* Quick Action Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-16 animate-fade-in" style={{animationDelay: '0.6s'}}>
             <Button variant="islamic" size="lg" className="shadow-mosque">
               <Users className="w-5 h-5 mr-2" />
-              Join Our Community
+              {t("hero.buttons.join")}
             </Button>
             <Button variant="donate" size="lg">
               <Heart className="w-5 h-5 mr-2" />
-              Donate Now
+              {t("hero.buttons.donate")}
             </Button>
             <Button variant="pearl" size="lg">
               <BookOpen className="w-5 h-5 mr-2" />
-              Academy Programs
+              {t("hero.buttons.academy")}
             </Button>
             <Button variant="outline" size="lg" className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10">
               <Play className="w-5 h-5 mr-2" />
-              Watch Our Story
+              {t("hero.buttons.watchStory")}
             </Button>
           </div>
 
@@ -73,13 +74,13 @@ const Hero = () => {
           {/* Quick Links Navigation */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-4xl mx-auto animate-fade-in" style={{animationDelay: '0.8s'}}>
             {[
-              { name: "Prayer Times", icon: "🕌" },
-              { name: "Donate", icon: "💝" },
-              { name: "Academy", icon: "🎓" },
-              { name: "E-Learning", icon: "💻" },
-              { name: "Events", icon: "📅" },
-              { name: "Community", icon: "🤝" },
-              { name: "Contact", icon: "📞" }
+              { name: t("hero.quickLinks.prayerTimes"), icon: "🕌" },
+              { name: t("hero.quickLinks.donate"), icon: "💝" },
+              { name: t("hero.quickLinks.academy"), icon: "🎓" },
+              { name: t("hero.quickLinks.eLearning"), icon: "💻" },
+              { name: t("hero.quickLinks.events"), icon: "📅" },
+              { name: t("hero.quickLinks.community"), icon: "🤝" },
+              { name: t("hero.quickLinks.contact"), icon: "📞" }
             ].map((link, index) => (
               <Button
                 key={link.name}

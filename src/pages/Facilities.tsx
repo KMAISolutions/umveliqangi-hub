@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, Heart, Calendar, Phone } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Facilities = () => {
   const [activeImageIndex, setActiveImageIndex] = useState<{ [key: string]: number }>({});
+  const { t } = useTranslation();
 
   const facilities = [
     {
@@ -167,13 +169,13 @@ const Facilities = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center text-white max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-              Our Facilities
+              {t("facilities.hero.title")}
             </h1>
             <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-              Purpose-built spaces serving faith, education, health, and community growth
+              {t("facilities.hero.description")}
             </p>
             <div className="text-lg opacity-90">
-              Every space reflects the dedication of our founders, the generosity of our community, and the vision of an inclusive society.
+              {t("facilities.hero.subtext")}
             </div>
           </div>
         </div>
@@ -277,19 +279,19 @@ const Facilities = () => {
       <section className="py-16 bg-card">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-6">
-            Visit Our Facilities
+            {t("facilities.cta.visit")}
           </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Experience our community spaces firsthand. Schedule a guided tour to see how our facilities serve our mission of faith, education, and community empowerment.
+            {t("facilities.cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="islamic" size="lg" className="group">
               <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-              Schedule a Tour
+              {t("facilities.cta.schedule")}
             </Button>
             <Button variant="outline" size="lg">
               <Users className="w-4 h-4 mr-2" />
-              Sponsor a Facility
+              {t("facilities.cta.sponsor")}
             </Button>
           </div>
         </div>

@@ -11,11 +11,13 @@ import { menuItems } from "./menuData";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Facebook } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const triggerClass =
   "px-3 py-2 text-sm font-medium text-foreground hover:underline data-[state=open]:underline focus:outline-none";
 
 export default function MegaMenu() {
+  const { t } = useTranslation();
   const items = menuItems.filter((i) => i.label !== "Donate");
   return (
     <NavigationMenu>
@@ -24,12 +26,12 @@ export default function MegaMenu() {
           <NavigationMenuItem key={item.label}>
             {item.groups ? (
               <NavigationMenuTrigger className={triggerClass}>
-                {item.label}
+                {t(`nav.top.${item.label.toLowerCase()}`)}
               </NavigationMenuTrigger>
             ) : (
               <NavigationMenuLink asChild>
                 <Link to={item.href || "/"} className={triggerClass}>
-                  {item.label}
+                  {t(`nav.top.${item.label.toLowerCase()}`)}
                 </Link>
               </NavigationMenuLink>
             )}
@@ -84,7 +86,7 @@ export default function MegaMenu() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Button asChild variant="donate" size="sm" className="ml-1">
-            <Link to="/#donate">Donate</Link>
+            <Link to="/#donate">{t("nav.top.donate")}</Link>
           </Button>
         </NavigationMenuItem>
       </NavigationMenuList>

@@ -3,9 +3,11 @@ import { Search, Phone, MapPin, Facebook } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import MegaMenu from "./navigation/MegaMenu";
 import MobileNav from "./navigation/MobileNav";
+import LanguageSelector from "@/components/LanguageSelector";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -26,12 +28,12 @@ const Navigation = () => {
             </div>
             <div className="flex items-center gap-1">
               <MapPin className="w-3 h-3" />
-              <span>Winterveldt, South Africa</span>
+              <span>{t("nav.topbar.location")}</span>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <span className="hidden md:inline">
-              Prayer Times: Fajr 05:30 | Dhuhr 12:15 | Asr 15:45 | Maghrib 18:20 | Isha 19:45
+              <span>{t("nav.topbar.prayerTimes")}</span>
             </span>
             <a
               href="https://www.facebook.com/p/Umveliqangi-Winterveldt-Juma-Masjid-100068276823921/"
@@ -78,7 +80,7 @@ const Navigation = () => {
             <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input
-                placeholder="Search mosque, academy, events..."
+                placeholder={t("nav.searchPlaceholder")}
                 className="pl-10 bg-background/50 border-primary/20 focus:border-primary/40"
               />
             </div>

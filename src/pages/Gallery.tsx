@@ -4,8 +4,10 @@ import { Card } from "@/components/ui/card";
 import mosqueHero from "@/assets/mosque-hero.jpg";
 import academyStudents from "@/assets/academy-students.jpg";
 import communityGathering from "@/assets/community-gathering.jpg";
+import { useTranslation } from "react-i18next";
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const items = [
     { src: mosqueHero, alt: "Mosque exterior at Umveliqangi Winterveldt", title: "Masjid & Architecture", category: "Events & Celebrations" },
     { src: academyStudents, alt: "Academy students studying Qur'an", title: "Academy & Student Life", category: "Academy & Student Life" },
@@ -17,9 +19,9 @@ const Gallery = () => {
       <Navigation />
       <main className="container mx-auto px-6 py-12">
         <header className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground">Media Gallery</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground">{t("gallery.title")}</h1>
           <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-            Explore highlights from our mosque, academy, and community life.
+            {t("gallery.description")}
           </p>
         </header>
 

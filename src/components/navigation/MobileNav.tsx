@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Menu, Facebook } from "lucide-react";
 import { menuItems } from "./menuData";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function MobileNav() {
+  const { t } = useTranslation();
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -16,14 +18,14 @@ export default function MobileNav() {
       <SheetContent side="left" className="p-0 w-[88vw] sm:w-[360px]">
         <div className="flex h-full flex-col">
           <div className="px-4 py-3 border-b">
-            <p className="text-sm font-semibold">Menu</p>
+            <p className="text-sm font-semibold">{t("nav.menu")}</p>
           </div>
           <div className="flex-1 overflow-y-auto px-2">
             <Accordion type="single" collapsible>
               {menuItems.map((item) => (
                 <AccordionItem key={item.label} value={item.label}>
                   <AccordionTrigger className="px-2 text-base text-foreground no-underline">
-                    {item.label}
+                    {t(`nav.top.${item.label.toLowerCase()}`)}
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="space-y-4 pb-2">
@@ -65,7 +67,7 @@ export default function MobileNav() {
               <Facebook className="w-5 h-5" aria-hidden />
             </a>
             <Button variant="donate" className="flex-1" asChild>
-              <Link to="/#donate">Donate</Link>
+              <Link to="/#donate">{t("nav.top.donate")}</Link>
             </Button>
           </div>
         </div>
