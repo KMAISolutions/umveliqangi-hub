@@ -163,19 +163,23 @@ const Facilities = () => {
     <div className="min-h-screen bg-gradient-subtle">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-hero">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto px-6 relative z-10">
+      {/* Hero Section with Background Slideshow */}
+      <section className="relative py-20 overflow-hidden">
+        {/* Background Slideshow */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 z-10"></div>
+          <div className="w-full h-full bg-gradient-hero bg-cover bg-center animate-ken-burns"></div>
+        </div>
+        <div className="container mx-auto px-6 relative z-20">
           <div className="text-center text-white max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-              {t("facilities.hero.title")}
+              Our Facilities
             </h1>
             <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-              {t("facilities.hero.description")}
+              Purpose-built spaces serving faith, education, health, and community growth
             </p>
             <div className="text-lg opacity-90">
-              {t("facilities.hero.subtext")}
+              Every space reflects the dedication of our founders, the generosity of our community, and the vision of an inclusive society.
             </div>
           </div>
         </div>

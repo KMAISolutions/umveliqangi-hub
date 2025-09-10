@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Play, Users, BookOpen, Heart } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import mosqueHero from "@/assets/mosque-hero.jpg";
 import AnimatedHeadline from "@/components/AnimatedHeadline";
+import VideoDialog from "@/components/VideoDialog";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const [videoOpen, setVideoOpen] = useState(false);
   const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -52,15 +55,15 @@ const Hero = () => {
               <Users className="w-5 h-5 mr-2" />
               {t("hero.buttons.join")}
             </Button>
-            <Button variant="donate" size="lg">
+            <Button variant="islamic" size="lg">
               <Heart className="w-5 h-5 mr-2" />
               {t("hero.buttons.donate")}
             </Button>
-            <Button variant="pearl" size="lg">
+            <Button variant="islamic" size="lg">
               <BookOpen className="w-5 h-5 mr-2" />
               {t("hero.buttons.academy")}
             </Button>
-            <Button variant="outline" size="lg" className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10">
+            <Button variant="islamic" size="lg" onClick={() => setVideoOpen(true)}>
               <Play className="w-5 h-5 mr-2" />
               {t("hero.buttons.watchStory")}
             </Button>
@@ -94,6 +97,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Dialog */}
+      <VideoDialog open={videoOpen} onOpenChange={setVideoOpen} />
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">

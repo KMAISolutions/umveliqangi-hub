@@ -144,9 +144,14 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-primary-foreground/80 text-sm">
-              © {currentYear} Umveliqangi Winterveldt Jum'a Masjid & Qur'an Leadership Academy. All rights reserved.
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-4 text-sm">
+              <p className="text-primary-foreground/80">
+                © {currentYear} Umveliqangi Winterveldt Jum'a Masjid & Qur'an Leadership Academy. All rights reserved.
+              </p>
+              <p className="text-primary-foreground/60 text-xs">
+                Powered By: <a href="https://www.kwenamai.co.za" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">Kwena Moloto A.I Solutions</a>
+              </p>
+            </div>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 {t("footer.bottom.privacy")}

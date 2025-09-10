@@ -131,6 +131,16 @@ const resources = {
           sponsor: "Sponsor a Facility",
         },
       },
+      media: {
+        hero: {
+          title: "Our Social Media",
+          description: "Stay connected with our community through social media updates, prayer times, and community engagement"
+        },
+        stayConnected: {
+          title: "Stay Connected With Our Community",
+          description: "Follow our journey, participate in discussions, and stay updated with the latest news and events from our mosque and academy."
+        }
+      },
     },
   },
   ar: {
@@ -261,8 +271,18 @@ const resources = {
             "اختبر مساحات مجتمعنا بنفسك. احجز جولة إرشادية لترى كيف تخدم مرافقنا رسالتنا في الإيمان والتعليم وتمكين المجتمع.",
           schedule: "احجز جولة",
           sponsor: "ادعم مرفقًا",
+          },
+          media: {
+            hero: {
+              title: "وسائل التواصل الاجتماعي",
+              description: "ابق على تواصل مع مجتمعنا من خلال تحديثات وسائل التواصل الاجتماعي ومواقيت الصلاة والمشاركة المجتمعية"
+            },
+            stayConnected: {
+              title: "ابق على تواصل مع مجتمعنا",
+              description: "تابع رحلتنا وشارك في النقاشات وابق على اطلاع بأحدث الأخبار والفعاليات من مسجدنا وأكاديميتنا."
+            }
+          },
         },
-      },
     },
   },
   zu: {
@@ -393,8 +413,18 @@ const resources = {
             "Zizwele izikhala zomphakathi wethu ngokwakho. Hlela uhambo oluqondisiwe ukuze ubone ukuthi izikhungo zethu zikhonza kanjani umgomo wethu wokholo, imfundo, nokunikeza amandla emphakathini.",
           schedule: "Hlela Uhambo",
           sponsor: "Xhasa Isikhungo",
+          },
+          media: {
+            hero: {
+              title: "Izindaba Zethu Zenhlalo",
+              description: "Hlala uxhumene nomphakathi wethu ngezibuyekezo zezindaba zenhlalo, izikhathi zomkhuleko, nokubandakanyeka komphakathi"
+            },
+            stayConnected: {
+              title: "Hlala Uxhumene Nomphakathi Wethu",
+              description: "Landela uhambo lwethu, hlanganyela ezingxoxweni, futhi uhlale uxhumeke nezindaba zakamuva nemicimbi evela emasjidini nakakhademi yethu."
+            }
+          },
         },
-      },
     },
   },
 } as const;

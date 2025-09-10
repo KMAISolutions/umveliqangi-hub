@@ -108,6 +108,13 @@ export default {
 					'0%, 100%': { transform: 'translateY(0px)' },
 					'50%': { transform: 'translateY(-10px)' }
 				},
+				'ken-burns': {
+					'0%': { transform: 'scale(1) translate(0, 0)' },
+					'25%': { transform: 'scale(1.1) translate(-2%, -1%)' },
+					'50%': { transform: 'scale(1.05) translate(1%, -2%)' },
+					'75%': { transform: 'scale(1.08) translate(-1%, 1%)' },
+					'100%': { transform: 'scale(1) translate(0, 0)' }
+				},
 				'shimmer': {
 					'0%': { backgroundPosition: '-200% 0' },
 					'100%': { backgroundPosition: '200% 0' }
@@ -121,6 +128,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 3s ease-in-out infinite',
+				'ken-burns': 'ken-burns 20s ease-in-out infinite',
 				'shimmer': 'shimmer 2s linear infinite',
 				'fade-in': 'fade-in 0.6s ease-out'
 			}
