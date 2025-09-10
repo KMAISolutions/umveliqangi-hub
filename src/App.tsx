@@ -10,6 +10,7 @@ import Community from "./pages/Community";
 import Facilities from "./pages/Facilities";
 import NotFound from "./pages/NotFound";
 import Gallery from "./pages/Gallery";
+import Media from "./pages/Media";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/community" element={<Community />} />
           <Route path="/facilities" element={<Facilities />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/media" element={<Media />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

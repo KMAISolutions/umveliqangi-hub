@@ -3,9 +3,6 @@ import Hero from "@/components/Hero";
 import StatsSection from "@/components/StatsSection";
 import FeaturedPrograms from "@/components/FeaturedPrograms";
 import Footer from "@/components/Footer";
-import PrayerTimesWidget from "@/components/PrayerTimesWidget";
-import SocialFeed from "@/components/SocialFeed";
-import CommunityPoll from "@/components/CommunityPoll";
 import { useTranslation } from "react-i18next";
 
 
@@ -17,26 +14,6 @@ const Index = () => {
       <Hero />
       <StatsSection />
       <FeaturedPrograms />
-      
-      {/* Community Engagement Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t("index.stayConnected.title")}
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              {t("index.stayConnected.description")}
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <PrayerTimesWidget />
-            <SocialFeed />
-            <CommunityPoll />
-          </div>
-        </div>
-      </section>
       
       <Footer />
       

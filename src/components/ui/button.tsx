@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-primary/10 hover:text-primary",
         link: "text-primary underline-offset-4 hover:underline",
         islamic: "bg-gradient-primary text-primary-foreground hover:shadow-glow transform hover:scale-105",
-        masjid: "bg-islamic-emerald text-primary-foreground hover:bg-islamic-emerald/90 shadow-elegant",
+        masjid: "bg-islamic-gold text-primary-foreground hover:bg-islamic-gold/90 shadow-elegant",
         crescent: "bg-islamic-crescent text-primary-foreground hover:bg-islamic-crescent/90 shadow-glow",
         pearl: "bg-islamic-pearl text-foreground border border-primary/20 hover:bg-primary/5",
         donate: "border border-primary/40 bg-background text-foreground hover:bg-primary/5",

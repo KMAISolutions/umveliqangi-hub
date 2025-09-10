@@ -3,8 +3,10 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Users, Award, Heart } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   const timeline = [
     {
       year: "1983",
@@ -94,27 +96,25 @@ const About = () => {
                 <div className="w-12 h-12 bg-primary-foreground/20 rounded-full flex items-center justify-center mb-4">
                   <Heart className="w-6 h-6" />
                 </div>
-                <CardTitle className="text-2xl">Our Mission</CardTitle>
+                <CardTitle className="text-2xl">{t("about.mission.title")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-primary-foreground/90">
-                  To provide comprehensive Islamic education, community services, and spiritual guidance 
-                  while fostering leadership, excellence, and social responsibility in the Winterveldt community.
+                  {t("about.mission.description")}
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-islamic-emerald text-primary-foreground shadow-elegant">
+            <Card className="bg-islamic-gold text-primary-foreground shadow-elegant">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary-foreground/20 rounded-full flex items-center justify-center mb-4">
                   <Award className="w-6 h-6" />
                 </div>
-                <CardTitle className="text-2xl">Our Vision</CardTitle>
+                <CardTitle className="text-2xl">{t("about.vision.title")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-primary-foreground/90">
-                  To be a leading model of Islamic community development, producing confident leaders 
-                  who contribute positively to society while maintaining strong spiritual foundations.
+                  {t("about.vision.description")}
                 </p>
               </CardContent>
             </Card>

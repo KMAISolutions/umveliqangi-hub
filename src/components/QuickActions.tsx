@@ -13,26 +13,28 @@ import {
   ChevronUp,
   ChevronDown
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const QuickActions = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { t } = useTranslation();
 
   const quickActions = [
     {
       icon: Clock,
-      label: "Prayer Times",
+      label: t("hero.quickLinks.prayerTimes"),
       action: () => console.log("Show prayer times"),
-      color: "bg-green-500 hover:bg-green-600"
+      color: "bg-islamic-gold hover:bg-islamic-gold/90"
     },
     {
       icon: Heart,
-      label: "Donate",
+      label: t("hero.quickLinks.donate"),
       action: () => console.log("Open donation page"),
       color: "bg-red-500 hover:bg-red-600"
     },
     {
       icon: Calendar,
-      label: "Events", 
+      label: t("hero.quickLinks.events"), 
       action: () => console.log("Open events"),
       color: "bg-blue-500 hover:bg-blue-600"
     },

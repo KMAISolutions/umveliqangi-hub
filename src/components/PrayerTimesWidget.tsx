@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface PrayerTimes {
   fajr: string;
@@ -12,6 +13,7 @@ interface PrayerTimes {
 }
 
 const PrayerTimesWidget = () => {
+  const { t } = useTranslation();
   const [prayerTimes, setPrayerTimes] = useState<PrayerTimes>({
     fajr: "05:30",
     dhuhr: "12:15", 
@@ -57,11 +59,11 @@ const PrayerTimesWidget = () => {
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-lg">
           <Clock className="w-5 h-5" />
-          Prayer Times
+          {t("prayerTimes.title")}
         </CardTitle>
         <div className="flex items-center gap-1 text-sm opacity-90">
           <MapPin className="w-3 h-3" />
-          <span>Winterveldt, South Africa</span>
+          <span>{t("nav.topbar.location")}</span>
         </div>
       </CardHeader>
       <CardContent className="space-y-3">
@@ -94,7 +96,7 @@ const PrayerTimesWidget = () => {
         
         {nextPrayer && (
           <div className="text-center text-sm bg-white/10 rounded p-2 mt-3">
-            Next Prayer: <span className="font-semibold">{nextPrayer}</span>
+            {t("prayerTimes.nextPrayer")}: <span className="font-semibold">{nextPrayer}</span>
           </div>
         )}
       </CardContent>

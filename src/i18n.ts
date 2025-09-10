@@ -41,6 +41,32 @@ const resources = {
           contact: "Contact",
         },
       },
+      stats: {
+        title: "Our Impact in Numbers",
+        description: "Four decades of dedicated service to the Winterveldt community through faith, education, and social development.",
+        studentsTitle: "Students Taught",
+        studentsDesc: "Qur'an and leadership education",
+        mealsTitle: "Meals Served", 
+        mealsDesc: "Community feeding programs",
+        projectsTitle: "Projects Completed",
+        projectsDesc: "Community development initiatives",
+        yearsTitle: "Years of Service",
+        yearsDesc: "Serving Winterveldt since 1983"
+      },
+      about: {
+        mission: {
+          title: "Our Mission",
+          description: "To provide comprehensive Islamic education, community services, and spiritual guidance while fostering leadership, excellence, and social responsibility in the Winterveldt community."
+        },
+        vision: {
+          title: "Our Vision",
+          description: "To be a leading model of Islamic community development, producing confident leaders who contribute positively to society while maintaining strong spiritual foundations."
+        }
+      },
+      prayerTimes: {
+        title: "Prayer Times",
+        nextPrayer: "Next Prayer"
+      },
       index: {
         stayConnected: {
           title: "Stay Connected",
@@ -147,6 +173,32 @@ const resources = {
           contact: "تواصل",
         },
       },
+      stats: {
+        title: "تأثيرنا بالأرقام",
+        description: "أربعة عقود من الخدمة المتفانية لمجتمع وينترفيلدت من خلال الإيمان والتعليم والتنمية الاجتماعية.",
+        studentsTitle: "طلاب تم تعليمهم",
+        studentsDesc: "تعليم القرآن والقيادة",
+        mealsTitle: "وجبات تم تقديمها", 
+        mealsDesc: "برامج إطعام المجتمع",
+        projectsTitle: "مشاريع مكتملة",
+        projectsDesc: "مبادرات التنمية المجتمعية",
+        yearsTitle: "سنوات الخدمة",
+        yearsDesc: "نخدم وينترفيلدت منذ 1983"
+      },
+      about: {
+        mission: {
+          title: "مهمتنا",
+          description: "تقديم التعليم الإسلامي الشامل وخدمات المجتمع والإرشاد الروحي مع تعزيز القيادة والتميز والمسؤولية الاجتماعية في مجتمع وينترفيلدت."
+        },
+        vision: {
+          title: "رؤيتنا",
+          description: "أن نكون نموذجاً رائداً للتنمية المجتمعية الإسلامية، ننتج قادة واثقين يساهمون إيجابياً في المجتمع مع الحفاظ على أسس روحية قوية."
+        }
+      },
+      prayerTimes: {
+        title: "أوقات الصلاة",
+        nextPrayer: "الصلاة التالية"
+      },
       index: {
         stayConnected: {
           title: "ابق على تواصل",
@@ -252,6 +304,32 @@ const resources = {
           community: "Umphakathi",
           contact: "Xhumana",
         },
+      },
+      stats: {
+        title: "Umthelela Wethu Ngezinombolo",
+        description: "Amashumi amane eminyaka yomsebenzi ozinikele kumphakathi waseWinterveldt ngokusebenzisa ukholo, imfundo kanye nokuthuthukiswa kwezenhlalakahle.",
+        studentsTitle: "Abafundi Abafundisiwe",
+        studentsDesc: "IQur'an nemfundo yobuholi",
+        mealsTitle: "Ukudla Okuphakiwe", 
+        mealsDesc: "Izinhlelo zokudlisa umphakathi",
+        projectsTitle: "Amaphrojekthi Aqediwe",
+        projectsDesc: "Amasu okuthuthukisa umphakathi",
+        yearsTitle: "Iminyaka Yomsebenzi",
+        yearsDesc: "Sisebenzela iWinterveldt kusukela ngo-1983"
+      },
+      about: {
+        mission: {
+          title: "Umgomo Wethu",
+          description: "Ukunikeza imfundo yobuIslam ephelele, izinsizakalo zomphakathi, nokuqondiswa okukhongolose kuyilapho sikhuthaza ubuholi, ukugqama, nomthwalo wemfanelo yenhlalo emphakathini waseWinterveldt."
+        },
+        vision: {
+          title: "Umbono Wethu",  
+          description: "Ukuba yisibonelo esiholayo sentuthuko yomphakathi wamaSulumane, sikhiqize abaholi abazithembayo abanikela kahle emphakathini kuyilapho begcina izisekelo zokholo eziqinile."
+        }
+      },
+      prayerTimes: {
+        title: "Izikhathi Zomkhuleko",
+        nextPrayer: "Umkhuleko Olandelayo"
       },
       index: {
         stayConnected: {

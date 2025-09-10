@@ -1,31 +1,38 @@
 import { Card } from "@/components/ui/card";
 import { Users, Utensils, Building, Calendar } from "lucide-react";
+import AnimatedNumber from "@/components/AnimatedNumber";
+import { useTranslation } from "react-i18next";
 
 const StatsSection = () => {
+  const { t } = useTranslation();
   const stats = [
     {
       icon: Users,
-      number: "2,500+",
-      label: "Students Taught",
-      description: "Qur'an and leadership education"
+      number: 2500,
+      suffix: "+",
+      label: t("stats.studentsTitle"),
+      description: t("stats.studentsDesc")
     },
     {
       icon: Utensils,
-      number: "15,000+",
-      label: "Meals Served",
-      description: "Community feeding programs"
+      number: 15000,
+      suffix: "+",
+      label: t("stats.mealsTitle"),
+      description: t("stats.mealsDesc")
     },
     {
       icon: Building,
-      number: "50+",
-      label: "Projects Completed",
-      description: "Community development initiatives"
+      number: 50,
+      suffix: "+",
+      label: t("stats.projectsTitle"),
+      description: t("stats.projectsDesc")
     },
     {
       icon: Calendar,
-      number: "40",
-      label: "Years of Service",
-      description: "Serving Winterveldt since 1983"
+      number: 40,
+      suffix: "",
+      label: t("stats.yearsTitle"),
+      description: t("stats.yearsDesc")
     }
   ];
 
@@ -34,10 +41,10 @@ const StatsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Our Impact in Numbers
+            {t("stats.title")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Four decades of dedicated service to the Winterveldt community through faith, education, and social development.
+            {t("stats.description")}
           </p>
         </div>
 
@@ -51,7 +58,7 @@ const StatsSection = () => {
                 <stat.icon className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="text-3xl md:text-4xl font-bold text-primary mb-2 group-hover:text-islamic-gold transition-colors">
-                {stat.number}
+                <AnimatedNumber end={stat.number} suffix={stat.suffix} />
               </h3>
               <h4 className="text-lg font-semibold text-foreground mb-2">
                 {stat.label}
