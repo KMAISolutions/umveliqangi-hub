@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import MegaMenu from "./navigation/MegaMenu";
 import MobileNav from "./navigation/MobileNav";
 import LanguageSelector from "@/components/LanguageSelector";
+import { useTranslation } from "react-i18next";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
