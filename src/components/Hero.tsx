@@ -28,9 +28,11 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Islamic Crescent Symbol */}
           <div className="mb-8 flex justify-center">
-            <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center shadow-mosque animate-float">
-              <span className="text-primary-foreground font-bold text-2xl">☪</span>
-            </div>
+            <img
+              src="/lovable-uploads/0edd6313-8209-4174-be23-b64ef87ef8fe.png"
+              alt="Umveliqangi Winterveldt Madressa Logo"
+              className="w-20 h-20 object-contain shadow-mosque animate-float"
+            />
           </div>
 
           {/* Main Heading */}

@@ -61,14 +61,14 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className="flex items-center gap-3">
-              <div
+              <img
+                src="/lovable-uploads/0edd6313-8209-4174-be23-b64ef87ef8fe.png"
+                alt="Umveliqangi Winterveldt Madressa Logo"
                 className={
                   (scrolled ? "w-9 h-9" : "w-10 h-10") +
-                  " bg-gradient-primary rounded-full flex items-center justify-center shadow-glow"
+                  " object-contain"
                 }
-              >
-                <span className="text-primary-foreground font-bold text-lg">ᕱ</span>
-              </div>
+              />
               <div>
                 <h1 className="font-bold text-lg text-foreground">Umveliqangi Winterveldt</h1>
                 <p className="text-xs text-muted-foreground">Jum'a Masjid & Academy</p>

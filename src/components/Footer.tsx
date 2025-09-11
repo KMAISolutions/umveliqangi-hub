@@ -38,9 +38,11 @@ const Footer = () => {
           {/* Organization Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow">
-                <span className="text-primary-foreground font-bold text-xl">ᕱ</span>
-              </div>
+              <img
+                src="/lovable-uploads/0edd6313-8209-4174-be23-b64ef87ef8fe.png"
+                alt="Umveliqangi Winterveldt Madressa Logo"
+                className="w-12 h-12 object-contain"
+              />
               <div>
                 <h3 className="font-bold text-lg">Umveliqangi Winterveldt</h3>
                 <p className="text-sm text-primary-foreground/80">Jum'a Masjid & Academy</p>
