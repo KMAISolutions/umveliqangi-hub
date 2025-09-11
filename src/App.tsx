@@ -8,6 +8,8 @@ import About from "./pages/About";
 import Events from "./pages/Events";
 import Community from "./pages/Community";
 import Facilities from "./pages/Facilities";
+import Academy from "./pages/Academy";
+import ELearning from "./pages/ELearning";
 import NotFound from "./pages/NotFound";
 import Gallery from "./pages/Gallery";
 import Media from "./pages/Media";
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/events" element={<Events />} />
           <Route path="/community" element={<Community />} />
           <Route path="/facilities" element={<Facilities />} />
+          <Route path="/academy" element={<Academy />} />
+          <Route path="/e-learning" element={<ELearning />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/media" element={<Media />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

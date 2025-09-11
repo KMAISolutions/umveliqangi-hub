@@ -1,9 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlogSection from "@/components/BlogSection";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CalendarDays, Heart, Users, Award } from "lucide-react";
+import { CalendarDays, Heart, Users, Award, ClipboardList } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Community = () => {
@@ -155,6 +155,127 @@ const Community = () => {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Outreach Sections */}
+      <section className="py-16 bg-gradient-subtle">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Community Programs
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive services addressing the diverse needs of our community
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card id="healthcare" className="hover:shadow-mosque transition-all duration-300">
+              <CardHeader>
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-4">
+                  <Heart className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <CardTitle>Healthcare & Wellness</CardTitle>
+                <CardDescription>
+                  Primary healthcare services, wellness programs, and health education for the community
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Primary medical checkups</li>
+                  <li>• Health screenings</li>
+                  <li>• Wellness workshops</li>
+                  <li>• Emergency medical support</li>
+                </ul>
+                <Button variant="islamic" className="w-full mt-4">Learn More</Button>
+              </CardContent>
+            </Card>
+            
+            <Card id="feeding" className="hover:shadow-mosque transition-all duration-300">
+              <CardHeader>
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-4">
+                  <Users className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <CardTitle>Feeding Schemes</CardTitle>
+                <CardDescription>
+                  Monthly feeding programs providing nutritious meals to families in need
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Monthly meal distribution</li>
+                  <li>• Emergency food parcels</li>
+                  <li>• Community soup kitchens</li>
+                  <li>• Nutritional education</li>
+                </ul>
+                <Button variant="islamic" className="w-full mt-4">Get Involved</Button>
+              </CardContent>
+            </Card>
+            
+            <Card id="volunteer" className="hover:shadow-mosque transition-all duration-300">
+              <CardHeader>
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-4">
+                  <Award className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <CardTitle>Volunteer Program</CardTitle>
+                <CardDescription>
+                  Join our dedicated volunteers making a difference in the community
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Community service projects</li>
+                  <li>• Mentorship programs</li>
+                  <li>• Skills-based volunteering</li>
+                  <li>• Youth leadership development</li>
+                </ul>
+                <Button variant="islamic" className="w-full mt-4">Register to Volunteer</Button>
+              </CardContent>
+            </Card>
+            
+            <Card id="entrepreneurship" className="hover:shadow-mosque transition-all duration-300">
+              <CardHeader>
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-4">
+                  <ClipboardList className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <CardTitle>Entrepreneurship Hub</CardTitle>
+                <CardDescription>
+                  Business development support and skills training for local entrepreneurs
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Business mentorship</li>
+                  <li>• Skills development workshops</li>
+                  <li>• Microfinance support</li>
+                  <li>• Market access programs</li>
+                </ul>
+                <Button variant="islamic" className="w-full mt-4">Join Program</Button>
+              </CardContent>
+            </Card>
+            
+            <Card id="family" className="hover:shadow-mosque transition-all duration-300 md:col-span-2 lg:col-span-1">
+              <CardHeader>
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-4">
+                  <Users className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <CardTitle>Family Corner</CardTitle>
+                <CardDescription>
+                  Programs and activities designed for families and children
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Family counseling services</li>
+                  <li>• Children's educational programs</li>
+                  <li>• Parenting workshops</li>
+                  <li>• Family recreational activities</li>
+                </ul>
+                <Button variant="islamic" className="w-full mt-4">Explore Programs</Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

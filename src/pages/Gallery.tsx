@@ -25,18 +25,68 @@ const Gallery = () => {
           </p>
         </header>
 
-        <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((item, idx) => (
-            <Card key={idx} className="overflow-hidden bg-card border-primary/10 shadow-elegant">
-              <figure className="aspect-[4/3] overflow-hidden">
-                <img src={item.src} alt={item.alt} className="w-full h-full object-cover" loading="lazy" />
+        {/* Gallery Sections */}
+        <section id="photos" className="mb-16">
+          <h2 className="text-2xl font-bold text-foreground mb-6">Photo Gallery</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {items.map((item, idx) => (
+              <Card key={idx} className="overflow-hidden bg-card border-primary/10 shadow-elegant hover:shadow-mosque transition-all duration-300 hover:-translate-y-2">
+                <figure className="aspect-[4/3] overflow-hidden">
+                  <img src={item.src} alt={item.alt} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" loading="lazy" />
+                </figure>
+                <div className="p-4">
+                  <h3 className="font-semibold text-foreground">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground">{item.category}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Facilities Gallery */}
+        <section id="facilities" className="mb-16">
+          <h2 className="text-2xl font-bold text-foreground mb-6">Facilities Gallery</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="overflow-hidden bg-card border-primary/10 shadow-elegant hover:shadow-mosque transition-all duration-300">
+              <figure className="aspect-square overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1466442929976-97f336a657be" alt="Main Mosque" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" loading="lazy" />
               </figure>
-              <div className="p-4">
-                <h2 className="font-semibold text-foreground">{item.title}</h2>
-                <p className="text-xs text-muted-foreground">{item.category}</p>
+              <div className="p-3">
+                <h3 className="font-semibold text-foreground text-sm">Main Mosque</h3>
+                <p className="text-xs text-muted-foreground">Prayer Hall</p>
               </div>
             </Card>
-          ))}
+            
+            <Card className="overflow-hidden bg-card border-primary/10 shadow-elegant hover:shadow-mosque transition-all duration-300">
+              <figure className="aspect-square overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Academy Classrooms" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" loading="lazy" />
+              </figure>
+              <div className="p-3">
+                <h3 className="font-semibold text-foreground text-sm">Academy</h3>
+                <p className="text-xs text-muted-foreground">Classrooms</p>
+              </div>
+            </Card>
+            
+            <Card className="overflow-hidden bg-card border-primary/10 shadow-elegant hover:shadow-mosque transition-all duration-300">
+              <figure className="aspect-square overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1721322800607-8c38375eef04" alt="Boarding House" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" loading="lazy" />
+              </figure>
+              <div className="p-3">
+                <h3 className="font-semibold text-foreground text-sm">Boarding</h3>
+                <p className="text-xs text-muted-foreground">Student Housing</p>
+              </div>
+            </Card>
+            
+            <Card className="overflow-hidden bg-card border-primary/10 shadow-elegant hover:shadow-mosque transition-all duration-300">
+              <figure className="aspect-square overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Healthcare Center" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" loading="lazy" />
+              </figure>
+              <div className="p-3">
+                <h3 className="font-semibold text-foreground text-sm">Healthcare</h3>
+                <p className="text-xs text-muted-foreground">Wellness Center</p>
+              </div>
+            </Card>
+          </div>
         </section>
       </main>
       <Footer />
