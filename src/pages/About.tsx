@@ -72,7 +72,7 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section id="story" className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -88,7 +88,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16">
+      <section id="mission" className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             <Card className="bg-gradient-primary text-primary-foreground shadow-mosque">
@@ -141,7 +141,7 @@ const About = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-16 bg-gradient-subtle">
+      <section id="timeline" className="py-16 bg-gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -177,7 +177,7 @@ const About = () => {
       </section>
 
       {/* Leadership */}
-      <section className="py-16">
+      <section id="leadership" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -218,6 +218,59 @@ const About = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Welcome Video */}
+      <section id="video" className="py-16 bg-gradient-subtle">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Welcome to Our Community
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Watch our founder share the inspiring story of how faith, dedication, and community spirit 
+              built this sacred space that serves thousands today.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="relative bg-gradient-primary rounded-2xl p-8 shadow-mosque">
+              <div className="aspect-video bg-primary-foreground/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-primary-foreground/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary-foreground mb-2">
+                    A Message from Our Founder
+                  </h3>
+                  <p className="text-primary-foreground/80 mb-4">
+                    Amir Al Hajj Kulungile Nkumane shares our journey from 1983 to today
+                  </p>
+                  <Button variant="pearl" size="lg">
+                    Watch Our Story
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div className="text-primary-foreground">
+                  <div className="text-2xl font-bold mb-1">40+</div>
+                  <div className="text-sm opacity-80">Years of Service</div>
+                </div>
+                <div className="text-primary-foreground">
+                  <div className="text-2xl font-bold mb-1">2,500+</div>
+                  <div className="text-sm opacity-80">Lives Touched</div>
+                </div>
+                <div className="text-primary-foreground">
+                  <div className="text-2xl font-bold mb-1">1</div>
+                  <div className="text-sm opacity-80">United Community</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
